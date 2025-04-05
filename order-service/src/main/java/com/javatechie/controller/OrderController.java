@@ -14,6 +14,7 @@ public class OrderController {
 
     @GetMapping("/{orderId}")
     public Order getOrder(@PathVariable String orderId) {
+        System.out.println("In Order Controller");
         return new Order(orderId, "Laptop, Mouse", "Shipped", LocalDate.now());
     }
 }

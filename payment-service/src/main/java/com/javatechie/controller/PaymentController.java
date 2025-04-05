@@ -12,6 +12,7 @@ public class PaymentController {
 
     @GetMapping("/{orderId}")
     public Payment getPayment(@PathVariable String orderId) {
+        System.out.println("In Payment Controller");
         return new Payment(orderId, "Paid", "Credit Card");
     }
 }

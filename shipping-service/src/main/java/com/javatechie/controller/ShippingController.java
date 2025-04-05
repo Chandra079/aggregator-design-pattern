@@ -12,6 +12,7 @@ public class ShippingController {
 
     @GetMapping("/{orderId}")
     public Shipping getShipping(@PathVariable String orderId) {
+        System.out.println("In Shipping Controller");
         return new Shipping(orderId, "In Transit", "New York", "3 Days");
     }
 }
